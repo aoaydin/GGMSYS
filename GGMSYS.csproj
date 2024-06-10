@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{177AE64F-82C3-4F32-88A2-732F5242EEA7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GGMSYS</RootNamespace>
+    <AssemblyName>GGMSYS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>GGMSYS-removebg-preview.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="frm_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Client.Designer.cs">
+      <DependentUpon>frm_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Main.Designer.cs">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Reports.Designer.cs">
+      <DependentUpon>frm_Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Sales.Designer.cs">
+      <DependentUpon>frm_Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Stock.Designer.cs">
+      <DependentUpon>frm_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_StockActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_StockActivity.Designer.cs">
+      <DependentUpon>frm_StockActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Users.Designer.cs">
+      <DependentUpon>frm_Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_Client.resx">
+      <DependentUpon>frm_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Main.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Reports.resx">
+      <DependentUpon>frm_Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Sales.resx">
+      <DependentUpon>frm_Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Stock.resx">
+      <DependentUpon>frm_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_StockActivity.resx">
+      <DependentUpon>frm_StockActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Users.resx">
+      <DependentUpon>frm_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GGMSYS-removebg-preview.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

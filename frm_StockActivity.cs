@@ -111,65 +111,75 @@ namespace GGMSYS
             FilterSales();
         }
 
-        
-
-        
-
-        
-
-       
-
-    
 
         private void FilterSales()
         {
             try
             {
-                string query = "SELECT * FROM Sales WHERE 1=1";
+                string query = @"
+            SELECT 
+                s.Evrak_Seri AS 'Evrak Seri', 
+                s.Evrak_Sira AS 'Evrak Sıra', 
+                s.ClientID AS 'Müşteri Kodu', 
+                c.CompanyName AS 'Firma Adı', 
+                st.StockCode AS 'Stok Kodu', 
+                st.StockName AS 'Stok Adı', 
+                s.Quantity AS 'Miktar', 
+                s.SalePrice AS 'Satış Fiyatı', 
+                (s.Quantity * s.SalePrice) AS 'Toplam Tutar', 
+                s.Quantity AS 'Toplam Miktar', 
+                CASE WHEN s.IsInStock = 1 THEN 'Giriş' ELSE 'Çıkış' END AS 'Stok Durumu', 
+                s.CreateDate AS 'Oluşturma Tarihi', 
+                s.UpdateDate AS 'Güncelleme Tarihi'
+            FROM Sales s
+            JOIN Stocks st ON s.StockID = st.StockID
+            JOIN Clients c ON s.ClientID = c.ClientID
+            WHERE 1=1";
+
                 List<SqlParameter> parameters = new List<SqlParameter>();
 
                 if (combo_CompanyName.SelectedIndex != -1)
                 {
-                    query += " AND ClientID = @ClientID";
+                    query += " AND s.ClientID = @ClientID";
                     parameters.Add(new SqlParameter("@ClientID", combo_CompanyName.SelectedValue));
                 }
 
                 if (combo_StockName.SelectedIndex != -1)
                 {
-                    query += " AND StockID = @StockID";
+                    query += " AND s.StockID = @StockID";
                     parameters.Add(new SqlParameter("@StockID", combo_StockName.SelectedValue));
                 }
 
                 if (!string.IsNullOrWhiteSpace(text_StockCode.Text))
                 {
-                    query += " AND StockID IN (SELECT StockID FROM Stocks WHERE StockCode = @StockCode)";
+                    query += " AND s.StockID IN (SELECT StockID FROM Stocks WHERE StockCode = @StockCode)";
                     parameters.Add(new SqlParameter("@StockCode", text_StockCode.Text));
                 }
 
                 if (!string.IsNullOrWhiteSpace(text_EvrakSeri.Text))
                 {
-                    query += " AND Evrak_Seri = @EvrakSeri";
+                    query += " AND s.Evrak_Seri = @EvrakSeri";
                     parameters.Add(new SqlParameter("@EvrakSeri", text_EvrakSeri.Text));
                 }
 
                 if (!string.IsNullOrWhiteSpace(text_EvrakSira.Text))
                 {
-                    query += " AND Evrak_Sira = @EvrakSira";
+                    query += " AND s.Evrak_Sira = @EvrakSira";
                     parameters.Add(new SqlParameter("@EvrakSira", text_EvrakSira.Text));
                 }
 
                 if (radio_FilterInput.Checked)
                 {
-                    query += " AND IsInStock = 1";
+                    query += " AND s.IsInStock = 1";
                 }
                 else if (radio_FilterOutput.Checked)
                 {
-                    query += " AND IsInStock = 0";
+                    query += " AND s.IsInStock = 0";
                 }
 
                 if (date_StartTime.Value.Date != DateTime.Now.Date || date_EndTime.Value.Date != DateTime.Now.Date)
                 {
-                    query += " AND CreateDate BETWEEN @StartTime AND @EndTime";
+                    query += " AND s.CreateDate BETWEEN @StartTime AND @EndTime";
                     parameters.Add(new SqlParameter("@StartTime", date_StartTime.Value));
                     parameters.Add(new SqlParameter("@EndTime", date_EndTime.Value));
                 }
@@ -182,6 +192,7 @@ namespace GGMSYS
                 MessageBox.Show($"Error filtering sales data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void radio_FilterAll_CheckedChanged(object sender, EventArgs e)
         {

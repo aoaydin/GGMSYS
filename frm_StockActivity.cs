@@ -111,6 +111,15 @@ namespace GGMSYS
             FilterSales();
         }
 
+        
+
+        
+
+        
+
+       
+
+    
 
         private void FilterSales()
         {

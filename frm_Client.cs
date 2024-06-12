@@ -110,22 +110,35 @@ namespace GGMSYS
 
         private void RefreshClientList()
         {
-            string commandText = "SELECT ClientID, CompanyName, CompanyPhoneNo, ClientName, ClientSurname, ClientPhone, ClientMail, CompanyAddress, SaleOff FROM Clients";
-            clientsTable = DBHelper.ExecuteSelectCommand(commandText, CommandType.Text);
-            data_CompanyList.DataSource = clientsTable;
-            data_CompanyList.RowHeadersVisible = false; // datagrid içerisinde ilk stunu gizliyor.
+            string commandText = @"
+        SELECT 
+            ClientID as 'Müşteri ID', 
+            CompanyName as 'Firma Adı', 
+            CompanyPhoneNo as 'Firma Numarası', 
+            ClientName as 'Müşteri Adı', 
+            ClientSurname as 'Müşteri Soyadı', 
+            ClientPhone as 'Müşteri Numarası', 
+            ClientMail as 'Müşteri Mail', 
+            CompanyAddress as 'Firma Adresi', 
+            SaleOff as 'Satışa Kapalı?' 
+        FROM Clients";
 
+            DataTable clientsTable = DBHelper.ExecuteSelectCommand(commandText, CommandType.Text);
+            data_CompanyList.DataSource = clientsTable;
+            data_CompanyList.RowHeadersVisible = false; // Hides the row header column
+
+            // Clear the text fields
             text_ClientID.Clear();
             text_ClientName.Clear();
             text_ClientSurname.Clear();
             text_ClientPhone.Clear();
-            text_CompanyAddress.Clear();
             text_ClientMail.Clear();
             text_CompanyPhoneNo.Clear();
             text_CompanyAddress.Clear();
             text_CompanySearch.Clear();
             text_CompanyName.Clear();
         }
+
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {

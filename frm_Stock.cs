@@ -58,24 +58,37 @@ namespace GGMSYS
 
         private void RefreshStockList()
         {
-            string commandText = "SELECT StockID , StockCode, StockName, StockQuantity, StockPrice, CreateDate, UpdateDate FROM Stocks";
+            string commandText = @"
+        SELECT 
+            StockID, 
+            StockCode as 'Stok Kodu', 
+            StockName as 'Stok Adı', 
+            StockQuantity as 'Stok Miktarı', 
+            StockPrice as 'Fiyatı', 
+            CreateDate as 'Oluşturma Tarihi', 
+            UpdateDate as 'Güncelleme Tarihi'
+        FROM Stocks";
+
             DataTable stockTable = DBHelper.ExecuteSelectCommand(commandText, CommandType.Text);
             data_StockList.DataSource = stockTable;
 
-            // ID ve GUID sütunlarını gizle
+            // Hide ID and date columns
             data_StockList.Columns["StockID"].Visible = false;
-            data_StockList.Columns["CreateDate"].Visible = false;
-            data_StockList.Columns["UpdateDate"].Visible = false;
+            data_StockList.Columns["Oluşturma Tarihi"].Visible = false;
+            data_StockList.Columns["Güncelleme Tarihi"].Visible = false;
+
+            // Adjust column sizes
             data_StockList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             data_StockList.RowHeadersVisible = false;
 
+            // Clear the text fields
             text_Stock.Clear();
             text_StockCode.Clear();
             text_StockPrice.Clear();
             text_StockSearch.Clear();
             text_StockName.Clear();
-
         }
+
 
         private void data_StockList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

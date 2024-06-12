@@ -58,21 +58,36 @@ namespace GGMSYS
         {
             try
             {
-                string query = "SELECT * FROM Sales";
+                string query = @"
+            SELECT 
+                s.Evrak_Seri AS 'Evrak Seri', 
+                s.Evrak_Sira AS 'Evrak Sıra', 
+                s.ClientID AS 'Müşteri Kodu', 
+                c.CompanyName AS 'Firma Adı', 
+                st.StockCode AS 'Stok Kodu', 
+                st.StockName AS 'Stok Adı', 
+                s.Quantity AS 'Miktar', 
+                s.SalePrice AS 'Satış Fiyatı', 
+                (s.Quantity * s.SalePrice) AS 'Toplam Tutar', 
+                s.Quantity AS 'Toplam Miktar', 
+                CASE WHEN s.IsInStock = 1 THEN 'Giriş' ELSE 'Çıkış' END AS 'Stok Durumu', 
+                s.CreateDate AS 'Oluşturma Tarihi', 
+                s.UpdateDate AS 'Güncelleme Tarihi'
+            FROM Sales s
+            JOIN Stocks st ON s.StockID = st.StockID
+            JOIN Clients c ON s.ClientID = c.ClientID";
                 DataTable salesTable = DBHelper.ExecuteSelectCommand(query, CommandType.Text);
                 data_StockActivity.DataSource = salesTable;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading sales data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Satış verileri yüklenirken bir hata oluştu: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        
 
-        
 
-        
+
 
         private void combo_CompanyName_SelectedIndexChanged(object sender, EventArgs e)
         {

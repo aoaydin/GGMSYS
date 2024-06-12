@@ -21,7 +21,7 @@ This is a Windows Forms application developed in C# using Visual Studio. The app
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/ggmsys.git
+    git clone [https://github.com/your-username/](https://github.com/aoaydin/ggmsys.git
     ```
 
 2. Open the solution in Visual Studio.

@@ -51,7 +51,15 @@ This is a Windows Forms application developed in C# using Visual Studio. The app
 - **View Stock**: Display all stock items with their details.
 - **Export Stock to Excel**: Click the "Export Stock" button to save stock data to an Excel file. The system will prompt you to choose the save location.
 
+
+## App Pictures
+
+![Login](https://raw.githubusercontent.com/aoaydin/GGMSYS/master/apppic/1.png?token=GHSAT0AAAAAACS52C4YEUUYX42OUVVZRXSGZT5FSSQ)
+![Main Menu](https://raw.githubusercontent.com/aoaydin/GGMSYS/master/apppic/2.png?token=GHSAT0AAAAAACS52C4YEUUYX42OUVVZRXSGZT5FSSQ)
+
 ## Code Examples
+
+
 
 ### Load Sales Data
 

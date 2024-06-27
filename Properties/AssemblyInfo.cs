@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // denetlenir. Bütünleştirilmiş kod ile ilişkili bilgileri değiştirmek için
 // bu öznitelik değerlerini değiştirin.
 [assembly: AssemblyTitle("GGMSYS")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Satış ve Stok Yönetimi")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Gemciler Güven Metal")]
 [assembly: AssemblyProduct("GGMSYS")]
-[assembly: AssemblyCopyright("Copyright ©  2024")]
+[assembly: AssemblyCopyright("Copyright ©  2024 aoaydin")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

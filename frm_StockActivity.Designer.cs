@@ -56,6 +56,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.Controls.Add(this.btn_Fliter);
             this.groupBox1.Controls.Add(this.text_EvrakSira);
             this.groupBox1.Controls.Add(this.label7);
@@ -83,11 +84,13 @@
             // 
             // btn_Fliter
             // 
+            this.btn_Fliter.Image = global::GGMSYS.Properties.Resources.icons8_filter_30;
             this.btn_Fliter.Location = new System.Drawing.Point(607, 118);
             this.btn_Fliter.Name = "btn_Fliter";
             this.btn_Fliter.Size = new System.Drawing.Size(137, 38);
             this.btn_Fliter.TabIndex = 21;
             this.btn_Fliter.Text = "Fitrele";
+            this.btn_Fliter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Fliter.UseVisualStyleBackColor = true;
             this.btn_Fliter.Click += new System.EventHandler(this.btn_Fliter_Click);
             // 
@@ -259,6 +262,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox2.Controls.Add(this.data_StockActivity);
             this.groupBox2.Location = new System.Drawing.Point(2, 187);
             this.groupBox2.Name = "groupBox2";
@@ -271,6 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(802, 767);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

@@ -51,6 +51,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.Controls.Add(this.text_Username);
             this.groupBox1.Controls.Add(this.text_UserID);
             this.groupBox1.Controls.Add(this.btn_Delete);
@@ -64,9 +65,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(2, 7);
+            this.groupBox1.Location = new System.Drawing.Point(2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(488, 258);
+            this.groupBox1.Size = new System.Drawing.Size(488, 263);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kullanıcı Bilgisi";
@@ -89,21 +90,26 @@
             // btn_Delete
             // 
             this.btn_Delete.CausesValidation = false;
-            this.btn_Delete.Location = new System.Drawing.Point(321, 190);
+            this.btn_Delete.Image = global::GGMSYS.Properties.Resources.icons8_delete_30;
+            this.btn_Delete.Location = new System.Drawing.Point(367, 182);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(62, 52);
+            this.btn_Delete.Size = new System.Drawing.Size(99, 50);
             this.btn_Delete.TabIndex = 7;
             this.btn_Delete.Text = "Sil";
+            this.btn_Delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Save
             // 
-            this.btn_Save.Location = new System.Drawing.Point(244, 190);
+            this.btn_Save.Image = global::GGMSYS.Properties.Resources.icons8_save_30;
+            this.btn_Save.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Save.Location = new System.Drawing.Point(244, 182);
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(71, 52);
+            this.btn_Save.Size = new System.Drawing.Size(117, 50);
             this.btn_Save.TabIndex = 6;
             this.btn_Save.Text = "Kaydet Güncelle";
+            this.btn_Save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Save.UseVisualStyleBackColor = true;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
@@ -186,6 +192,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox2.Controls.Add(this.data_UserList);
             this.groupBox2.Location = new System.Drawing.Point(2, 271);
             this.groupBox2.Name = "groupBox2";
@@ -218,6 +225,7 @@
             this.AcceptButton = this.btn_Save;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(499, 557);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

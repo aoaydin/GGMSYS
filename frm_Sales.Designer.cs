@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.numeric_Sira = new System.Windows.Forms.NumericUpDown();
             this.text_StockStatus = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@
             this.CompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Evrak_Seri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Evrak_Sira = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Sira)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -74,6 +74,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.numeric_Sira);
             this.groupBox1.Controls.Add(this.text_StockStatus);
@@ -105,6 +106,15 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Satış Ürün Detayları";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(289, 173);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(25, 16);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "KG";
             // 
             // numeric_Sira
             // 
@@ -190,11 +200,13 @@
             // 
             // btn_AddSaleList
             // 
-            this.btn_AddSaleList.Location = new System.Drawing.Point(659, 75);
+            this.btn_AddSaleList.Image = global::GGMSYS.Properties.Resources.icons8_add_basket_30;
+            this.btn_AddSaleList.Location = new System.Drawing.Point(632, 75);
             this.btn_AddSaleList.Name = "btn_AddSaleList";
-            this.btn_AddSaleList.Size = new System.Drawing.Size(95, 47);
+            this.btn_AddSaleList.Size = new System.Drawing.Size(122, 47);
             this.btn_AddSaleList.TabIndex = 17;
-            this.btn_AddSaleList.Text = "Sepete      Ekle";
+            this.btn_AddSaleList.Text = "Sepete Ekle";
+            this.btn_AddSaleList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_AddSaleList.UseVisualStyleBackColor = true;
             this.btn_AddSaleList.Click += new System.EventHandler(this.btn_AddSaleList_Click);
             // 
@@ -244,21 +256,26 @@
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(659, 129);
+            this.btn_Delete.Image = global::GGMSYS.Properties.Resources.icons8_save_30;
+            this.btn_Delete.Location = new System.Drawing.Point(632, 129);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(95, 47);
+            this.btn_Delete.Size = new System.Drawing.Size(122, 47);
             this.btn_Delete.TabIndex = 9;
             this.btn_Delete.Text = "Sil";
+            this.btn_Delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Save
             // 
-            this.btn_Save.Location = new System.Drawing.Point(659, 21);
+            this.btn_Save.Image = global::GGMSYS.Properties.Resources.icons8_save_30;
+            this.btn_Save.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Save.Location = new System.Drawing.Point(632, 21);
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(95, 47);
+            this.btn_Save.Size = new System.Drawing.Size(122, 47);
             this.btn_Save.TabIndex = 8;
             this.btn_Save.Text = "Kaydet  Güncelle";
+            this.btn_Save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Save.UseVisualStyleBackColor = true;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
@@ -322,6 +339,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox3.Controls.Add(this.data_SaleList);
             this.groupBox3.Location = new System.Drawing.Point(7, 268);
             this.groupBox3.Name = "groupBox3";
@@ -436,20 +454,12 @@
             this.Evrak_Sira.ReadOnly = true;
             this.Evrak_Sira.Width = 125;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(289, 173);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(25, 16);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "KG";
-            // 
             // frm_Sales
             // 
             this.AcceptButton = this.btn_AddSaleList;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(769, 758);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);

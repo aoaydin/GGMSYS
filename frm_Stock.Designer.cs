@@ -51,6 +51,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.Controls.Add(this.text_StockCode);
             this.groupBox1.Controls.Add(this.text_StockID);
             this.groupBox1.Controls.Add(this.text_StockName);
@@ -66,7 +67,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(1, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(766, 153);
+            this.groupBox1.Size = new System.Drawing.Size(798, 153);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Detayları";
@@ -113,21 +114,26 @@
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(659, 81);
+            this.btn_Delete.Image = global::GGMSYS.Properties.Resources.icons8_delete_30;
+            this.btn_Delete.Location = new System.Drawing.Point(652, 78);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(95, 47);
+            this.btn_Delete.Size = new System.Drawing.Size(137, 60);
             this.btn_Delete.TabIndex = 4;
             this.btn_Delete.Text = "Sil";
+            this.btn_Delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Save
             // 
-            this.btn_Save.Location = new System.Drawing.Point(659, 21);
+            this.btn_Save.Image = global::GGMSYS.Properties.Resources.icons8_save_30;
+            this.btn_Save.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Save.Location = new System.Drawing.Point(652, 10);
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(95, 47);
+            this.btn_Save.Size = new System.Drawing.Size(137, 62);
             this.btn_Save.TabIndex = 3;
-            this.btn_Save.Text = "Kaydet  Güncelle";
+            this.btn_Save.Text = "Kaydet Güncelle";
+            this.btn_Save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Save.UseVisualStyleBackColor = true;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
@@ -183,10 +189,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox2.Controls.Add(this.data_StockList);
             this.groupBox2.Location = new System.Drawing.Point(1, 163);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(766, 487);
+            this.groupBox2.Size = new System.Drawing.Size(798, 487);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ürün ve Stok Listesi";
@@ -200,7 +207,7 @@
             this.data_StockList.ReadOnly = true;
             this.data_StockList.RowHeadersWidth = 51;
             this.data_StockList.RowTemplate.Height = 24;
-            this.data_StockList.Size = new System.Drawing.Size(754, 458);
+            this.data_StockList.Size = new System.Drawing.Size(792, 458);
             this.data_StockList.TabIndex = 0;
             this.data_StockList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_StockList_CellDoubleClick);
             // 
@@ -209,7 +216,8 @@
             this.AcceptButton = this.btn_Save;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 654);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(802, 654);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;

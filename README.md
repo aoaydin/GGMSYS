@@ -89,4 +89,4 @@ private void LoadSalesData()
 
 
 
-![Viewing Reports][(https://raw.githubusercontent.com/aoaydin/GGMSYS/master/apppic/1.png?token=GHSAT0AAAAAACS52C4YEUUYX42OUVVZRXSGZT5FSSQ)]
+https://raw.githubusercontent.com/aoaydin/GGMSYS/master/apppic/1.png?token=GHSAT0AAAAAACS52C4YEUUYX42OUVVZRXSGZT5FSSQ

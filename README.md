@@ -56,6 +56,12 @@ This is a Windows Forms application developed in C# using Visual Studio. The app
 
 ![Login](https://raw.githubusercontent.com/aoaydin/GGMSYS/master/apppic/1.png?token=GHSAT0AAAAAACS52C4YEUUYX42OUVVZRXSGZT5FSSQ)
 ![Main Menu](https://raw.githubusercontent.com/aoaydin/GGMSYS/master/apppic/2.png?token=GHSAT0AAAAAACS52C4YEUUYX42OUVVZRXSGZT5FSSQ)
+![Stock List](https://raw.githubusercontent.com/aoaydin/GGMSYS/master/apppic/3.png?token=GHSAT0AAAAAACS52C4YEUUYX42OUVVZRXSGZT5FSSQ)
+![Company List](https://raw.githubusercontent.com/aoaydin/GGMSYS/master/apppic/4.png?token=GHSAT0AAAAAACS52C4YEUUYX42OUVVZRXSGZT5FSSQ)
+![](https://raw.githubusercontent.com/aoaydin/GGMSYS/master/apppic/5.png?token=GHSAT0AAAAAACS52C4YEUUYX42OUVVZRXSGZT5FSSQ)
+![](https://raw.githubusercontent.com/aoaydin/GGMSYS/master/apppic/6.png?token=GHSAT0AAAAAACS52C4YEUUYX42OUVVZRXSGZT5FSSQ)
+![](https://raw.githubusercontent.com/aoaydin/GGMSYS/master/apppic/7.png?token=GHSAT0AAAAAACS52C4YEUUYX42OUVVZRXSGZT5FSSQ)
+![](https://raw.githubusercontent.com/aoaydin/GGMSYS/master/apppic/8.png?token=GHSAT0AAAAAACS52C4YEUUYX42OUVVZRXSGZT5FSSQ)
 
 ## Code Examples
 

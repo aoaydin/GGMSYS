@@ -86,3 +86,7 @@ private void LoadSalesData()
         MessageBox.Show($"Satış verileri yüklenirken bir hata oluştu: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
     }
 }
+
+
+
+![Viewing Reports][(https://raw.githubusercontent.com/aoaydin/GGMSYS/master/apppic/1.png?token=GHSAT0AAAAAACS52C4YEUUYX42OUVVZRXSGZT5FSSQ)]
